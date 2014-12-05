@@ -3,7 +3,7 @@ module Markup
     attr_reader :flat_rate
 
     def initialize(flat_rate)
-       if (flat_rate < 0)
+      if (flat_rate < 0)
         raise "flat_rate cannot be negative"
       end
 
