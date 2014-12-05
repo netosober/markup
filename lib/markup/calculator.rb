@@ -14,7 +14,7 @@ module Markup
       if (price<0)
         raise "Price cannot be negative"
       end
-      price * 1.05
+      price + price * @flat_rate
     end
   end
 end
