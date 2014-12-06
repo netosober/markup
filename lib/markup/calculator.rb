@@ -20,7 +20,9 @@ module Markup
 
       worker_markup_result = @worker_markup.calculate(subtotal, workers_quantity)
       material_markup_result = @material_markup.calculate(subtotal, material_type)
-      subtotal + worker_markup_result + material_markup_result
+      total = subtotal + worker_markup_result + material_markup_result
+
+      total.round(2)
     end
   end
 end

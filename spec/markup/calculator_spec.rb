@@ -43,6 +43,16 @@ module Markup
           result = calculator.process(price, workers_quantity, material_type)
           expect(result).to eq(110)
         end
+        it "rounds result to 2 decimals" do
+          price_with_decimals = 100.5555
+          expected_result = price_with_decimals*1.05
+          allow(worker_markup).to receive(:calculate).with(expected_result, 3) {0}
+          allow(material_markup).to receive(:calculate).with(expected_result, material_type) {0}
+
+          result = calculator.process(100.5555, workers_quantity, material_type)
+
+          expect(result).to eq(expected_result.round(2))
+        end
       end
       context "with flat rate of 0" do
         before(:each) do
