@@ -1,6 +1,8 @@
 Markup Calculator
 =================
 
+[![Build Status](https://travis-ci.org/netosober/markup.svg)](https://travis-ci.org/netosober/markup)
+
 Nulogy Markup Calculator
 
 
