@@ -1,7 +1,7 @@
 Markup Calculator
 =================
 
-[![Build Status](https://travis-ci.org/netosober/markup.svg)](https://travis-ci.org/netosober/markup) [![Code Climate](https://codeclimate.com/github/netosober/markup/badges/gpa.svg)](https://codeclimate.com/github/netosober/markup)
+[![Build Status](https://travis-ci.org/netosober/markup.svg)](https://travis-ci.org/netosober/markup) [![Code Climate](https://codeclimate.com/github/netosober/markup/badges/gpa.svg)](https://codeclimate.com/github/netosober/markup) [![Test Coverage](https://codeclimate.com/github/netosober/markup/badges/coverage.svg)](https://codeclimate.com/github/netosober/markup)
 
 Nulogy Markup Calculator
 
