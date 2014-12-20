@@ -1,3 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rspec', "~> 3.1.0"
+group :test do
+  gem 'rake'
+  gem 'rspec', "~> 3.1.0"
+end
