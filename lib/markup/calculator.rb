@@ -12,14 +12,10 @@ module Markup
       @flat_rate = flat_rate
     end
 
-    def process(price, workers_quantity, material_type)
-      if (price<0)
-        raise "Price cannot be negative"
-      end
-      subtotal = price + price * @flat_rate
-
-      worker_markup_result = @worker_markup.calculate(subtotal, workers_quantity)
-      material_markup_result = @material_markup.calculate(subtotal, material_type)
+    def process(order)
+      subtotal = order.price + order.price * @flat_rate
+      worker_markup_result = @worker_markup.calculate(subtotal, order)
+      material_markup_result = @material_markup.calculate(subtotal, order)
       total = subtotal + worker_markup_result + material_markup_result
 
       total.round(2)

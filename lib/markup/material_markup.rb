@@ -6,14 +6,10 @@ module Markup
       @material_rates = material_rates
     end
 
-    def calculate(price, material)
-      if (price < 0)
-        raise "price cannot be negative"
-      end
-
-      rate = material_rates[material]
+    def calculate(subtotal, order)
+      rate = material_rates[order.material_type]
       if rate
-        price*rate
+        subtotal*rate
       else
         0
       end

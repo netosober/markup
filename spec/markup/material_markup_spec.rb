@@ -16,15 +16,14 @@ module Markup
     end
     describe "#calculate" do
       it "returns markup for known material" do
-        result = material_markup.calculate(100, "drugs")
+        order = Order.new(100, 3, 'drugs')
+        result = material_markup.calculate(order.price, order)
         expect(result).to within(0.01).of(7.5)
       end
       it "returns 0 markup for unknown material" do
-        result = material_markup.calculate(100, "air")
+        order = Order.new(100, 3, 'air')
+        result = material_markup.calculate(order.price, order)
         expect(result).to eq(0)
-      end
-      it "raises error if price is negative" do
-        expect {material_markup.calculate(-1, "drugs")}.to raise_error
       end
     end
   end
